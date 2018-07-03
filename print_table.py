@@ -5,7 +5,7 @@ def print_table(user_dict, col_1, col_2):
     #Create a list of lists for the dictionary
     table_data = [[col_1, col_2]]
     for key in user_dict:
-        table_data.append([key, dict[key]])
+        table_data.append([key, user_dict[key]])
     print(table_data)
 
 reaction = {
