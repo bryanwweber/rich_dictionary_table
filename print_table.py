@@ -1,16 +1,18 @@
-#Accepts a dictionary as an input, prints the contents as a rich table
+#Accepts a dictionary as an input, outputs the contents as a rich table
 
-def print_table(dict):
-    #Construct an empty table of dimensions 2xn
-    n = len(dict)
-    table = ""
-    for i in n:
-        #Construct the empty HTML table
-    #where n is the number of entries in the dictionary
-    #Fill the top cells with the keys of the dictionary
+def print_table(dict, col_1, col_2):
+    import html
+    #Create a list of lists for the dictionary
+    table_data = [[col_1, col_2]]
     for key in dict:
-        #add each key
-    #Fill the bottom cells with the values of the dictionary
-    for key in dict:
-        #add each dict[key]
-    #-Neaten the table by making sure all cells are of uniform size
+        table_data.append([key, dict[key]])
+    print(table_data)
+
+reaction = {
+"H20":20,
+"CH4":30,
+"O2":10,
+"CO2":40,
+}
+
+print_table(reaction,"Species","Percentage")
